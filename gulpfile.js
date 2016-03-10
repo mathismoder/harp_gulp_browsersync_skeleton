@@ -22,13 +22,13 @@ gulp.task('serve', function () {
     /**
      * Watch for scss changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch(["*.css", "*.sass", "*.scss", "*.less"], function () {
+    gulp.watch(["src/**/*.css", "src/**/*.sass", "src/**/*.scss", "src/**/*.less"], function () {
       reload("main.css", {stream: true});
     });
     /**
      * Watch for all other changes, reload the whole page
      */
-    gulp.watch(["*.html", "*.ejs", "*.jade", "*.js", "*.json", "*.md"], function () {
+    gulp.watch(["src/**/*.html", "src/**/*.ejs", "src/**/*.jade", "src/**/*.js", "*.json", "*.md"], function () {
       reload();
     });
   })
